@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+ * @author Magebrew
+ * @copyright Copyright (c) 2019 Magebrew
+ * @package Magebrew_ImageUploadFormField
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="cms_page" resource="default" engine="innodb" comment="CMS Page Table">
+        <column xsi:type="varchar" name="banner_image" nullable="true" length="255" comment="Banner Image"/>
+    </table>
+</schema>

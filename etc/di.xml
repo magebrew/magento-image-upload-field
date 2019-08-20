@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+ * @author Magebrew
+ * @copyright Copyright (c) 2019 Magebrew
+ * @package Magebrew_ImageUploadFormField
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="MagebrewBannerUploader" type="Magebrew\ImageUploadFormField\Model\BannerUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="const">Magebrew\ImageUploadFormField\Model\BannerUploader::IMAGE_TMP_PATH</argument>
+            <argument name="basePath" xsi:type="const">Magebrew\ImageUploadFormField\Model\BannerUploader::IMAGE_PATH</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Magebrew\ImageUploadFormField\Controller\Adminhtml\Cmspage\Banner\Upload">
+        <arguments>
+            <argument name="uploader" xsi:type="object">MagebrewBannerUploader</argument>
+        </arguments>
+    </type>
+</config>

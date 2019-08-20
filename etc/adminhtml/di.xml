@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+ * @author Magebrew
+ * @copyright Copyright (c) 2019 Magebrew
+ * @package Magebrew_ImageUploadFormField
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cms\Model\PageRepository">
+        <plugin name="magebrew_save_banner_image" type="Magebrew\ImageUploadFormField\Plugin\Cms\Model\PageRepository\BeforeSave\SaveBannerImagePlugin" />
+    </type>
+    <type name="Magebrew\ImageUploadFormField\Plugin\Cms\Model\PageRepository\BeforeSave\SaveBannerImagePlugin">
+        <arguments>
+            <argument name="uploader" xsi:type="object">MagebrewBannerUploader</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Cms\Model\Page\DataProvider">
+        <plugin name="magebrew_add_banner_image_to_form" type="Magebrew\ImageUploadFormField\Plugin\Cms\Model\Page\DataProvider\AfterGetData\ModifyBannerDataPlugin"/>
+    </type>
+</config>

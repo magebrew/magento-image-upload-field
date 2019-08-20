@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+ * @author Magebrew
+ * @copyright Copyright (c) 2019 Magebrew
+ * @package Magebrew_ImageUploadFormField
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="top.container">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="cmsbanner.viewmodel"
+                   template="Magebrew_ImageUploadFormField::banner.phtml">
+                <arguments>
+                    <argument name="viewModel" xsi:type="object">Magebrew\ImageUploadFormField\ViewModel\BannerViewModel</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

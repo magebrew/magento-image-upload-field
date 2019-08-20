@@ -1,0 +1,11 @@
+<?php
+
+/** @var \Magebrew\ImageUploadFormField\ViewModel\BannerViewModel $viewModel */
+$viewModel = $block->getData('viewModel');
+
+$bannerImageUrl = $viewModel->getBannerImageUrl();
+?>
+
+<?php if ($bannerImageUrl): ?>
+    <div class="container cms-banner"><img src="<?php echo $bannerImageUrl ?>"/></div>
+<?php endif; ?>
