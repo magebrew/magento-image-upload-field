@@ -72,11 +72,10 @@ class SaveBannerImagePlugin
                     }
                 }
             }
-
-            $page->setData($data);
         } else {
             $data[$key] = null;
         }
+        $page->setData($data);
 
         return [$page];
     }
