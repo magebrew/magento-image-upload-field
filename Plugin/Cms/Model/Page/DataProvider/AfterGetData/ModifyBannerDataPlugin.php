@@ -44,7 +44,7 @@ class ModifyBannerDataPlugin
         $loadedData
     ) {
         /** @var array $loadedData */
-        if (is_array($loadedData) && count($loadedData) == 1) {
+        if (is_array($loadedData)) {
             foreach ($loadedData as $key => $item) {
                 if (isset($item['banner_image']) && $item['banner_image']) {
                     $imageArr = [];
